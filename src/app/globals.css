@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.badge-text-wrap {
+  text-wrap: auto !important;
+}

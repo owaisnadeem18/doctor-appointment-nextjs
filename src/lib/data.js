@@ -11,75 +11,95 @@ export const doctorCategories = [
   "General Physician"
 ];
 
-const doctors = [
+export const doctors = [
   {
+    id: 1,
     name: "Dr. Ayesha Khan",
     fee: 2000,
     hospital: "Aga Khan University Hospital, Karachi",
     appointmentTime: "10:00 AM - 2:00 PM",
-    category: "Cardiologist"
+    category: "Cardiologist",
+    gender: "female"
   },
   {
+    id: 2,
     name: "Dr. Hassan Raza",
     fee: 1500,
     hospital: "Shifa International Hospital, Islamabad",
     appointmentTime: "3:00 PM - 7:00 PM",
-    category: "Dermatologist"
+    category: "Dermatologist",
+    gender: "male"
   },
   {
+    id: 3,
     name: "Dr. Sara Ahmed",
     fee: 1000,
     hospital: "Liaquat National Hospital, Karachi",
     appointmentTime: "9:00 AM - 1:00 PM",
-    category: "Dentist"
+    category: "Dentist",
+    gender: "female"
   },
   {
+    id: 4,
     name: "Dr. Kamran Malik",
     fee: 1800,
     hospital: "Fatima Memorial Hospital, Lahore",
     appointmentTime: "2:00 PM - 6:00 PM",
-    category: "Pediatrician"
+    category: "Pediatrician",
+    gender: "male"
   },
   {
+    id: 5,
     name: "Dr. Mehwish Fatima",
     fee: 2500,
     hospital: "Ittefaq Hospital, Lahore",
     appointmentTime: "11:00 AM - 4:00 PM",
-    category: "Gynecologist"
+    category: "Gynecologist",
+    gender: "female"
   },
   {
+    id: 6,
     name: "Dr. Ahmed Bashir",
     fee: 2000,
     hospital: "Doctors Hospital, Lahore",
     appointmentTime: "10:00 AM - 1:00 PM",
-    category: "Orthopedic"
+    category: "Orthopedic",
+    gender: "male"
   },
   {
+    id: 7,
     name: "Dr. Nida Rehman",
     fee: 2200,
     hospital: "Pakistan Institute of Medical Sciences (PIMS), Islamabad",
     appointmentTime: "12:00 PM - 5:00 PM",
-    category: "Neurologist"
+    category: "Neurologist",
+    gender: "female"
   },
   {
+    id: 8,
     name: "Dr. Murtaza Ali",
     fee: 1800,
     hospital: "Civil Hospital, Karachi",
     appointmentTime: "3:00 PM - 7:00 PM",
-    category: "Psychiatrist"
+    category: "Psychiatrist",
+    gender: "male"
   },
   {
+    id: 9,
     name: "Dr. Asma Khalid",
     fee: 1300,
     hospital: "Jinnah Hospital, Lahore",
     appointmentTime: "9:30 AM - 12:30 PM",
-    category: "ENT Specialist"
+    category: "ENT Specialist",
+    gender: "female"
   },
   {
+    id: 10,
     name: "Dr. Imran Siddiqui",
     fee: 1000,
     hospital: "Abbasi Shaheed Hospital, Karachi",
     appointmentTime: "10:00 AM - 4:00 PM",
-    category: "General Physician"
+    category: "General Physician",
+    gender: "male"
   }
 ];

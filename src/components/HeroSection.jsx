@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { heroSectionImage } from '@/assets'
 import { Button } from './ui/Button'
+import { CalendarPlus, Stethoscope } from 'lucide-react'
 
 const HeroSection = () => {  
 
@@ -20,14 +21,18 @@ const HeroSection = () => {
   From scheduling to patient notes, our smart tools handle the busywork so you can focus on better care and real connections.
 </p>
 
-          <div className="flex justify-center gap-1">
+          <div className="flex justify-center gap-5">
+            
             <Button className="cursor-pointer">
-              Book an Appointment
+              <CalendarPlus/>
+               Find Doctors
             </Button>
             <Button
-              className="ml-4 cursor-pointer bg-gray-200 text-gray-900 hover:bg-`1gray-300"
+              variant={"outline"}
+              className="cursor-pointer"
             >
-              Learn More
+              <Stethoscope/>
+              Apply As Doctor
             </Button>
           </div>
         </div>
