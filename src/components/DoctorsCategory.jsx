@@ -25,7 +25,7 @@ const DoctorsCategory = ({ isHome }) => {
     const filteredDoctors = isHome ? doctors.slice(0, 6) : doctors
 
     return (
-        <div className='p-3' >
+        <div className='p-3 min-h-[calc(100vh-60px)]' >
             <div className='container mx-auto' >
 
                 <div className='flex items-center justify-between gap-2' >
@@ -70,7 +70,7 @@ const DoctorsCategory = ({ isHome }) => {
                                 <div className='flex justify-start items-center' >
                                         <Avatar>
 
-                                        <AvatarImage src={"https://www.github.com/shadcn.png"} />
+                                        <AvatarImage src= {doctor?.gender.toLowerCase() == "male" ? maleDoctorAvatar.src : femaleDoctorAvatar.src} />
 
                                         <AvatarFallback>{doctor?.name}</AvatarFallback>
 
