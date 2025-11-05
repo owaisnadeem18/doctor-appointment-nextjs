@@ -3,10 +3,12 @@ import React from 'react'
 import { heroSectionImage } from '@/assets'
 import { Button } from './ui/Button'
 
-const HeroSection = () => {
+const HeroSection = () => {  
+
+
   return (
     <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex py-24 md:flex-row flex-col items-center">
         {/* Left Text Section */}
         <div className=" xl:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="xl:text-5xl text-3xl mb-4 font-bold text-gray-900">
@@ -23,7 +25,7 @@ const HeroSection = () => {
               Book an Appointment
             </Button>
             <Button
-              className="ml-4 cursor-pointer bg-gray-200 text-gray-900 hover:bg-gray-300"
+              className="ml-4 cursor-pointer bg-gray-200 text-gray-900 hover:bg-`1gray-300"
             >
               Learn More
             </Button>
