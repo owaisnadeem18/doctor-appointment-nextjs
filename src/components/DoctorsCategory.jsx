@@ -101,7 +101,7 @@ const DoctorsCategory = ({ isHome }) => {
   </div>
   <div className="flex justify-between items-center gap-3 mb-2">
     <div className='flex gap-1 items-center'  > <Hospital className='h-4 w-4' /> Hospital</div>
-    <div className="bg-gray-50 py-3 px-4 w-[60%] rounded-2xl text-sm font-semibold">
+    <div className="bg-gray-50 py-3 px-4 w-[60%] rounded-2xl text-sm font-semibold text-right">
       {doctor?.hospital}
     </div>
   </div>

@@ -9,6 +9,8 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Calendar, LogOutIcon, User, User2 } from 'lucide-react'
+import Link from 'next/link'
 
 const Header = () => {
   return (
@@ -36,12 +38,21 @@ const Header = () => {
 </Avatar>
     </MenubarTrigger>
     <MenubarContent>
-      <MenubarItem>
-        Show Profile 
-      </MenubarItem>
-      <MenubarItem>
-        Log Out 
-      </MenubarItem>
+      <Link href={"/profile"} >
+        <MenubarItem className={"cursor-pointer"} >
+          <User2 className='h-4 w-4' /> My Profile 
+        </MenubarItem>
+      </Link>
+      <Link href={"/appointments"}  >
+        <MenubarItem  className={"cursor-pointer"} >
+          <Calendar className='h-4 w-4' />  Appointments 
+        </MenubarItem>
+      </Link>
+      <Link href={"/logout"}  >
+        <MenubarItem className={"cursor-pointer"} >
+          <LogOutIcon className='h-4 w-4' /> Log Out 
+        </MenubarItem>
+      </Link>
       
     </MenubarContent>
   </MenubarMenu>

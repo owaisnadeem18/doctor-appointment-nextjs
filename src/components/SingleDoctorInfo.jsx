@@ -1,16 +1,17 @@
 "use client";
 import Image from "next/image";
 import { femaleDoctorAvatar, maleDoctorAvatar } from "@/assets";
-import { CalendarClock, MapPin, User2, Star } from "lucide-react";
+import { CalendarClock, MapPin, User2, Star, CircleDollarSign } from "lucide-react";
 import { Button } from "./ui/Button";
+import { Badge } from "./ui/badge";
 
 export default function SingleDoctorInfo({ data }) {
   return (
-    <div className="container mx-auto py-12 2xl:px-0 lg:px-12 sm:px-6 px-3">
+    <div className="container mx-auto sm:py-12 py-7 px-3">
       <section className="text-gray-700 body-font">
-        <div className="flex flex-col md:flex-row items-center lg:items-start gap-10">
+        <div className="flex flex-col sm:flex-row items-center  gap-10 ">
           {/* Doctor Image */}
-          <div className="w-full lg:w-1/2">
+          <div className="">
             <Image
               src={
                 data?.gender?.toLowerCase() === "male"
@@ -18,19 +19,20 @@ export default function SingleDoctorInfo({ data }) {
                   : femaleDoctorAvatar
               }
               alt="Doctor"
-              className="rounded-2xl object-cover shadow-md w-full"
+              className="rounded-2xl object-cover shadow-md "
             />
           </div>
 
           {/* Doctor Info */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-5">
-            <div>
+          <div className="w-full lg:w-1/3 flex flex-col gap-5">
+            <div className="flex gap-3 items-center" >
               <h1 className="text-3xl font-semibold text-gray-900">
-                Dr. {data?.name}
+                {data?.name}
               </h1>
-              <p className="text-blue-600 font-medium mt-1">
+              
+              <Badge >
                 {data?.category}
-              </p>
+              </Badge>
             </div>
 
             {/* Ratings */}
@@ -70,21 +72,26 @@ export default function SingleDoctorInfo({ data }) {
                   <MapPin size={18} />
                   Hospital
                 </div>
-                <span className="bg-gray-100 py-2 rounded-xl text-sm font-semibold text-gray-900 text-right">
+                <span className="bg-gray-100 rounded-xl text-sm font-semibold text-gray-900 text-right">
                   {data?.hospital}
+                </span>
+              </div>
+              <div className="flex justify-between items-center gap-3">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <CircleDollarSign size={18} />
+                  Fee
+                </div>
+                <span className="bg-gray-100 rounded-xl text-sm font-semibold text-gray-900 text-right">
+                  {data?.fee} Rs
                 </span>
               </div>
             </div>
 
             {/* Fee & Action */}
-            <div className="flex items-center justify-between  gap-3">
-              <span className="text-2xl font-bold text-gray-900">
-                Fee: Rs. {data?.fee}
-              </span>
-              <Button className=" transition">
+
+              <Button className=" transition w-full cursor-pointer">
                 Book Appointment
               </Button>
-            </div>
           </div>
         </div>
       </section>
