@@ -4,6 +4,7 @@ import { femaleDoctorAvatar, maleDoctorAvatar } from "@/assets";
 import { CalendarClock, MapPin, User2, Star, CircleDollarSign } from "lucide-react";
 import { Button } from "./ui/Button";
 import { Badge } from "./ui/badge";
+import AppointmentPicker from "./AppointmentPicker";
 
 export default function SingleDoctorInfo({ data }) {
   return (
@@ -11,7 +12,7 @@ export default function SingleDoctorInfo({ data }) {
       <section className="text-gray-700 body-font">
         <div className="flex flex-col sm:flex-row items-center  gap-10 ">
           {/* Doctor Image */}
-          <div className="">
+          <div >
             <Image
               src={
                 data?.gender?.toLowerCase() === "male"
@@ -19,7 +20,7 @@ export default function SingleDoctorInfo({ data }) {
                   : femaleDoctorAvatar
               }
               alt="Doctor"
-              className="rounded-2xl object-cover shadow-md "
+              className="rounded-2xl object-cover shadow-md lg:h-[500px] lg:w-[500px]"
             />
           </div>
 
@@ -88,7 +89,13 @@ export default function SingleDoctorInfo({ data }) {
             </div>
 
             {/* Fee & Action */}
+              <div className="flex flex-col gap-2" >
 
+              <h2>
+                Pick Your Appointment Today
+              </h2>
+              <AppointmentPicker/>
+              </div>
               <Button className=" transition w-full cursor-pointer">
                 Book Appointment
               </Button>

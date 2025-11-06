@@ -113,7 +113,7 @@ const DoctorsCategory = ({ isHome }) => {
                             <CardFooter>
                                 <Link href={`/doctors/${doctor?.id}`} >
                                     <Button className={"cursor-pointer"} >
-                                        Book Appointment
+                                        See Details
                                     </Button>
                                 </Link>
                             </CardFooter>

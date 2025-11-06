@@ -11,8 +11,12 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Calendar, LogOutIcon, User, User2 } from 'lucide-react'
 import Link from 'next/link'
+import { Button } from './ui/Button'
 
 const Header = () => {
+  
+  let session = null
+  
   return (
     <div className='bg-gray-200 p-3' >
         <div className='container mx-auto' >
@@ -29,6 +33,8 @@ const Header = () => {
 
             <div>
 
+              {
+                session ? 
             <Menubar>
   <MenubarMenu>
     <MenubarTrigger>
@@ -56,7 +62,13 @@ const Header = () => {
       
     </MenubarContent>
   </MenubarMenu>
-</Menubar>
+</Menubar> : <Link href={"/login"} >
+                <Button className='cursor-pointer' variant={"outline"} >
+                  Login 
+                </Button>
+</Link> 
+              }
+
             </div>
             </div>
 
