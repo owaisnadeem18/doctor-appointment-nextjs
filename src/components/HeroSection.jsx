@@ -3,6 +3,7 @@ import React from 'react'
 import { heroSectionImage } from '@/assets'
 import { Button } from './ui/Button'
 import { CalendarPlus, Stethoscope } from 'lucide-react'
+import Link from 'next/link'
 
 const HeroSection = () => {
 
@@ -27,6 +28,7 @@ const HeroSection = () => {
               <CalendarPlus />
               Find Doctors
             </Button>
+            <Link href={"/apply"} >
             <Button
               variant={"outline"}
               className="cursor-pointer"
@@ -34,6 +36,8 @@ const HeroSection = () => {
               <Stethoscope />
               Apply As Doctor
             </Button>
+            
+            </Link>
           </div>
         </div>
 
