@@ -2,7 +2,12 @@ import mongoose from "mongoose";
 
 export default async function connectDB() {
     let connection 
-
-    connection = await mongoose.connect(process.env.MONGO_URL)
+    if (connection?.connection?.readyState !== 1) {
+        connection = await mongoose?.connect(process.env.MONGO_URI)
+        console.log("MongoDB connected")
+    }
+    else {
+        console.log("MongoDB Already connected")
+    }
 
 }
