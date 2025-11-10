@@ -12,10 +12,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Calendar, LogOutIcon, User, User2 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from './ui/Button'
+import { useSession } from 'next-auth/react'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
+import { getServerSession } from 'next-auth'
+import Image from 'next/image'
 
-const Header = () => {
+const Header = async () => {
   
-  let session = null
+  let session = await getServerSession(authOptions)
+
+  console.log("Session is => " , session)
+
+
+
+  // if (session?.user)
+  //   {
+  //     redirect("/")
+  //   } 
+
+  // console.log(session)
   
   return (
     <div className='bg-gray-200 p-3' >
@@ -39,8 +54,10 @@ const Header = () => {
   <MenubarMenu>
     <MenubarTrigger>
         <Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" />
-  <AvatarFallback>CN</AvatarFallback>
+  <AvatarImage src={session?.user?.image || "/default-avatar.png"} alt="User Avatar" />
+  <AvatarFallback>
+    {session?.user?.name?.[0] || "U"}
+  </AvatarFallback>
 </Avatar>
     </MenubarTrigger>
     <MenubarContent>
